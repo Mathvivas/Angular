@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Pessoa } from '../model/pessoa'
 
 @Component({
   selector: 'app-formulario',
@@ -7,6 +8,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./formulario.component.css']
 })
 export class FormularioComponent implements OnInit {
+
+  pessoa: Pessoa = new Pessoa()
 
   profissoes: string[] = [
     'Engenheiro',
@@ -17,16 +20,16 @@ export class FormularioComponent implements OnInit {
   ]
 
   salvar(pessoaForm: NgForm): void {
-    const nome = pessoaForm.value.nome
-    const fone = pessoaForm.value.fone
-    const email = pessoaForm.value.email
-    const profissao = pessoaForm.value.profissao
-    console.log(`
-      Nome: ${nome},
-      Telefone: ${fone},
-      Email: ${email},
-      Profissão: ${profissao}
-      `)
+    // this.pessoa.nome = pessoaForm.value.nome
+    // this.pessoa.fone = pessoaForm.value.fone
+    // this.pessoa.email = pessoaForm.value.email
+    // this.pessoa.profissao = pessoaForm.value.profissao
+    // console.log(`
+    //   Nome: ${nome},
+    //   Telefone: ${fone},
+    //   Email: ${email},
+    //   Profissão: ${profissao}
+    //   `)
   }
 
   constructor() { }
